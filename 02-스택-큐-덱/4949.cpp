@@ -18,12 +18,10 @@ int main() {
   string str;
 
   while (true) {
-
     stack<char> s;
 
-getline(cin, str);
-cout << "읽은 줄: [" << str << "]" << endl; // 버퍼 확인
-if (str == ".") break;
+    getline(cin, str);
+    if (str == ".") break;
 
     bool isBalanced = true;
 
