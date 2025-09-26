@@ -41,7 +41,7 @@ getPrimeFactor(int k, vector<int> &primes) { // 코드 전체의 메모리 줄�
     factors.push_back(primes[k]);
     k /= primes[k];
   }
-  factors.push_back(k); // k를 왜 넣어
+  factors.push_back(k);
   return factors;
 }
 
@@ -50,7 +50,7 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  
+
   int n, k;
   cin >> n;
 
