@@ -23,27 +23,18 @@ int main() {
   int current = 0;
 
   // 바퀴가 시계방향으로 돌아가려면, 0 다음에 마지막 인덱스가 와야 함.
+  
   for (int i = 0; i < k; i++) {
     cin >> s >> c;
     current = (current - s + n) % n;
 
-    
     // 배열이 차있고, 안에 있는 값과 넣으려는 값이 다르면,
     if (wheel[current] != '?' && wheel[current] != c) {
       cout << "!";
       return 0;
-    } 
+    }
 
     wheel[current] = c;
-  }
-
-  for(int i = 0; i < n; i++){
-    for (int j = i + 1; j <= n; j++) {
-      if(wheel[i] != '?' && wheel[i] == wheel[j]){
-        cout << "!";
-        return 0;
-      }
-    }
   }
 
   for (int i = 0; i < n; i++) {
