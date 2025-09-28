@@ -47,7 +47,7 @@ int main() {
     if (n == 0) {
       break;
     }
-    
+
     bool found = false;
     int a = 0, b = 0;
 
