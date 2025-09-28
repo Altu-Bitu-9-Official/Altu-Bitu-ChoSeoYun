@@ -15,10 +15,11 @@ using namespace std;
 
 int main() {
 
-  stack<char> s;
   string str;
 
   while (true) {
+    stack<char> s;
+
     getline(cin, str);
     if (str == ".") break;
 

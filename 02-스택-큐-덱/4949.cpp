@@ -17,11 +17,11 @@ int main() {
 
   string str;
 
-  while (true) {
-    stack<char> s;
-
+  while (true) {    
     getline(cin, str);
     if (str == ".") break;
+    
+    stack<char> s;
 
     bool isBalanced = true;
 
