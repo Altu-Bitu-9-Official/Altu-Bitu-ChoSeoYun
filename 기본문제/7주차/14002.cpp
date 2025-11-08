@@ -9,12 +9,13 @@ int main() {
   int n;
   cin >> n;
 
-  vector<int> a(n);
-  vector<int> dp(n);
+  vector<int> a(n); // 입력된 수열
+  vector<int> dp(n); // LIS의 길이
 
-  int len = 0; // 가장 긴 부분 수열의 길이
-  int tmp = 0; //
+  int len = 0; // 가장 긴 LIS의 길이
+  int tmp = 0; // 지금까지 찾은 가장 긴 LIS의 길이
   int max_idx = -1; //가장 긴 부분 수열의 마지막 인덱스
+
 
   for (int i = 0; i < n; i++) {
     cin >> a[i];
@@ -33,6 +34,7 @@ int main() {
     }
   }
 
+  // 복원 (역순으로 복원하는 이유는 dp[i] == 현재 필요 길이인 원소를 찾아가면 LIS의 원소들을 역순으로 얻을 수 있음.)
   vector<int> ans;
 
   for (int i = max_idx; i >= 0; i--) {
